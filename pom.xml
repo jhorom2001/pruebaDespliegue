@@ -56,9 +56,9 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.mariadb.jdbc</groupId>
-			<artifactId>mariadb-java-client</artifactId>
-			<scope>runtime</scope>
+			<groupId>org.postgresql</groupId>
+    		<artifactId>postgresql</artifactId>
+    		<version>42.6.0</version> <!-- o la versión más reciente -->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
