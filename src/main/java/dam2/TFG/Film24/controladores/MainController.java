@@ -16,13 +16,14 @@ public class MainController {
 	@GetMapping("/")
 	public String MostrarPeliculasPorCategoria(Model model) {
 		model.addAttribute("listaPeliculas", peliculaRepository.findAll());
-
-		model.addAttribute("peliculasAccion", peliculaRepository.findByCategoria("Acción"));
+		
+		//QUITAR TILDES
+		model.addAttribute("peliculasAccion", peliculaRepository.findByCategoria("Accion"));
 		model.addAttribute("peliculasAventura", peliculaRepository.findByCategoria("Aventura"));
 		model.addAttribute("peliculasComedia", peliculaRepository.findByCategoria("Comedia"));
 		model.addAttribute("peliculasDrama", peliculaRepository.findByCategoria("Drama"));
-		model.addAttribute("peliculasCienciaFiccion", peliculaRepository.findByCategoria("Ciencia ficción"));
-		model.addAttribute("peliculasFantasia", peliculaRepository.findByCategoria("Fantasía"));
+		model.addAttribute("peliculasCienciaFiccion", peliculaRepository.findByCategoria("Ciencia ficcion"));
+		model.addAttribute("peliculasFantasia", peliculaRepository.findByCategoria("Fantasia"));
 		model.addAttribute("peliculasTerror", peliculaRepository.findByCategoria("Terror"));
 
 		return "index";
